@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文字滚动效果</title>
+    <!-- <link rel="stylesheet" href="./index.css"> -->
+    <style>
+        * {
+            background-color: black;
+            height: 100%;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* .container {
+    background-color: cadetblue;
+    overflow: hidden;
+    padding: 20px 0px;
+} */
+
+
+.container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left{
+    padding-left: 30px;
+    list-style: none;
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+}
+
+.left li {
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    font-size: 50px;
+    text-align: center;
+    color: aliceblue;
+}
+.left .special{
+    font-size: 20px;
+}
+.link{
+    display: none;
+    color: aliceblue;
+    text-decoration: none;
+}
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <ul class="left">
+            <li class="special">认真看完哟!!!不然我会生气滴</li>
+            <li>谢谢你，出现在我的人生中</li>
+            <li>谢谢你，陪伴我一起走过了那么多时光</li>
+            <li>从小学，初中到高中</li>
+            <li>十分庆幸能一直和你一个学校，虽然不是同一级</li>
+            <li></li>
+            <li></li>
+        </ul>
+        <div class="aside">
+            <a href="Memories.html" class="link">
+                点击这里前往下一页哟！
+            </a>
+        </div>
+    </div>
+    <script>
+        // 封装一个获取dom的函数
+function $(selector) {
+    return document.querySelector(selector);
+}
+(function() {
+    // 获取ul的dom
+    var item = $('ul');
+    // console.log(item);
+    function newItem() {
+        // 获取第一个li
+        var newitem = item.children[0];
+        // console.log(newitem);
+        // 复制获取的第一个li
+        var newli = newitem.cloneNode(true);
+        // console.log(newli);
+        // 添加进ul
+        item.appendChild(newli);
+        // console.log(item);
+    }
+    newItem();
+
+    /**动画 */
+    // 定义计时器的时间
+    var interval = 2500;
+    setInterval(moveNext, interval);
+    // 每一个li的高度
+    var itemHeight = 100;
+    // 当前显示的li
+    var currentli = 0;
+    // 列表滚动到下一项
+    function moveNext() {
+        // 第一次的高度
+        var form = itemHeight * currentli;
+        // li变为下一个
+        currentli++;
+        // li改变后的高度
+        var formli = itemHeight * currentli;
+        // 变化的总时间
+        var totalTime = 400;
+        // 变化一次的时间
+        var oneTime = 20;
+        // 变化的次数
+        var changeNumber = totalTime / oneTime;
+        // 变化高度
+        var changeAmount = (formli - form) / changeNumber;
+        // 计时器
+        var timerId = setInterval(function() {
+            form += changeAmount;
+            if (form >= formli) {
+                clearInterval(timerId);
+                if (currentli === item.children.length - 1) {
+                    form = 0;
+                    currentli = 0;
+                }
+            }
+            item.scrollTop = form;
+        }, oneTime)
+    }
+})();
+    var link=document.querySelector('.link')
+    document.addEventListener('click',function(){
+        link.style.display='block';
+    })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+    <style>
+
+        body{
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+        /* section{
+            display: none;
+        } */
+        .love{
+            width: 300px;
+            height: 200px;
+            background: url(../img/timg.gif) no-repeat center center;
+            background-size: 100%;
+        }
+
+        div{
+            float: left;
+            /* display: none; */
+            width: 300px;
+            height: 200px;
+            font-size: 18px;
+            color: whitesmoke;
+            text-align: center;
+        }
+        div:nth-child(1){
+            
+            width: 0;
+            height: 0;
+            background: url(../img/qh1.jpg) no-repeat center center;
+            background-size: 100%;
+            animation: arise1 0.5s  ease 1 forwards;
+        }
+        div:nth-child(2){
+            
+            width: 0;
+            height: 0;
+            background: url(../img/qh2.jpg) no-repeat center center;
+            background-size: 100%;
+            animation: arise2 0.5s 0.5s ease 1 forwards;
+        }
+        div:nth-child(3){
+            width: 0;
+            height: 0;
+            background: url(../img/qh3.jpg) no-repeat center center;
+            background-size: 100%;
+            animation: arise3 0.5s 1s ease 1 forwards;
+        }
+        div:nth-child(4){
+            width: 0;
+            height: 0;
+            background: url(../img/qh4.jpg) no-repeat center center;
+            background-size: 100%;
+            animation: arise4 0.5s 1.5s ease 1 forwards;
+        }
+        div:nth-child(5){
+            width: 0;
+            height: 0;
+            background: url(../img/qh5.jpg) no-repeat center center;
+            background-size: 100%;
+            animation: arise5 0.5s 2s ease 1 forwards;
+        }
+        div:nth-child(6){
+            width: 0;
+            height: 0;
+            background: url(../img/qh6.jpg) no-repeat center center;
+            background-size: 100%;
+            animation: arise6 0.5s 2.5s ease 1 forwards;
+        }
+        div:nth-child(7){
+            width: 0;
+            height: 0;
+            background: url(../img/qh7.jpg) no-repeat center center;
+            background-size: 100%;
+            animation: arise7 0.5s 3s ease 1 forwards;
+        }
+        div:nth-child(8){
+            width: 0;
+            height: 0;
+            background: url(../img/qh8.png) no-repeat center center;
+            background-size: 100%;
+            animation: arise8 0.5s 3.5s ease 1 forwards;
+        }
+        div:nth-child(9){
+            width: 0;
+            height: 0;
+            background: url(../img/qh9.jpg) no-repeat center center;
+            background-size: 100%;
+            animation: arise9 0.5s 4s ease 1 forwards;
+        }
+        div:nth-child(10){
+            width: 0;
+            height: 0;
+            background: url(../img/qh10.jpg) no-repeat center center;
+            background-size: 100%;
+            animation: arise10 0.5s 4.5s ease 1 forwards;
+        }
+        div:nth-child(11){
+            width: 0;
+            height: 0;
+            background: url(../img/qh11.jpg) no-repeat center center;
+            background-size: 100%;
+            animation: arise11 0.5s 5s ease 1 forwards;
+        }
+        div:nth-child(12){
+            width: 0;
+            height: 0;
+            background: url(../img/qh12.jpg) no-repeat center center;
+            background-size: 100%;
+            animation: arise12 0.5s 5.5s ease 1 forwards;
+        }
+        div:nth-child(13){
+            width: 0;
+            height: 0;
+            background: url(../img/qh13.jpg) no-repeat center center;
+            background-size: 100%;
+            animation: arise13 0.5s 6s ease 1 forwards;
+        }
+        div:nth-child(14){
+            width: 0;
+            height: 0;
+            background: url(../img/qh14.jpg) no-repeat center center;
+            background-size: 100%;
+            animation: arise14 0.5s 6.5s ease 1 forwards;
+        }
+        div:nth-child(15){
+            width: 0;
+            height: 0;
+            background: url(../img/qh15.jpg) no-repeat center center;
+            background-size: 100%;
+            animation: arise15 0.5s 7s ease 1 forwards;
+        }
+        div:nth-child(16){
+            width: 0;
+            height: 0;
+            background: url(../img/qh16.jpg) no-repeat center center;
+            background-size: 100%;
+            animation: arise16 0.5s 7.5s ease 1 forwards;
+        }
+        div:nth-child(17){
+            width: 0;
+            height: 0;
+            background: url(../img/qh17.jpg) no-repeat center center;
+            background-size: 100%;
+            animation: arise17 0.5s 8s ease 1 forwards;
+        }
+        div:nth-child(18){
+            width: 0;
+            height: 0;
+            background: url(../img/qh18.jpg) no-repeat center center;
+            background-size: 100%;
+            animation: arise18 0.5s 8.5s ease 1 forwards;
+        }
+        div:nth-child(19){
+            width: 0;
+            height: 0;
+            background: url(../img/qh19.jpg) no-repeat center center;
+            background-size: 100%;
+            animation: arise19 0.5s 9s ease 1 forwards;
+        }
+        div:nth-child(20){
+            width: 0;
+            height: 0;
+            background: url(../img/qh20.jpg) no-repeat center center;
+            background-size: 100%;
+            animation: arise20 0.5s 9.5s ease 1 forwards;
+        }
+
+        /* 第一版面 */
+        @keyframes arise1{
+            0%{
+                transform: translateX(600px);
+            }
+            100%{
+                width: 300px;
+                height: 200px;
+                transform: translate3d(600px,200px,0)
+                
+            }
+        }
+        @keyframes arise2{
+            0%{
+                transform: translateX(0);
+            }
+            100%{
+                width: 300px;
+                height: 200px;
+                transform: translate3d(0,0,0)
+                
+            }
+        }
+        @keyframes arise3{
+            0%{
+                transform: translateX(600px);
+            }
+            100%{
+                width: 300px;
+                height: 200px;
+                transform: translate3d(300px,0,0)
+                
+            }
+        }
+        @keyframes arise4{
+            0%{
+                transform: translate3d(-900px,700px,0);
+            }
+            100%{
+                width: 300px;
+                height: 200px;
+                transform: translate3d(-600px,400px,0)
+                
+            }
+        }
+        @keyframes arise5{
+            0%{
+                transform: translate3d(300px,700px,0);
+            }
+            100%{
+                width: 300px;
+                height: 200px;
+                transform: translate3d(-300px,400px,0)
+                
+            }
+        }
+        @keyframes arise6{
+            0%{
+                transform: translate3d(600px,0,0)
+            }
+            100%{
+                width: 300px;
+                height: 200px;
+                transform: translate3d(600px,-200px,0)
+                
+            }
+        }
+        @keyframes arise7{
+            0%{
+                transform: translate3d(300px,0,0)
+            }
+            100%{
+                width: 300px;
+                height: 200px;
+                transform: translate3d(0,0,0)
+                
+            }
+        }
+        @keyframes arise8{
+            0%{
+                transform: translate3d(0,0,0)
+            }
+            100%{
+                width: 300px;
+                height: 200px;
+                transform: translate3d(0,200px,0)
+                
+            }
+        }
+        @keyframes arise9{
+            0%{
+                transform: translate3d(-300px,0,0)
+            }
+            100%{
+                width: 300px;
+                height: 200px;
+                transform: translate3d(0,0,0)
+                
+            }
+        }
+        @keyframes arise10{
+            0%{
+                transform: translate3d(-600px,0,0)
+            }
+            100%{
+                width: 300px;
+                height: 200px;
+                transform: translate3d(-1200px,-200px,0)
+                
+            }
+        }
+        @keyframes arise11{
+            0%{
+                transform: translate3d(600px,-200px,0)
+            }
+            100%{
+                width: 300px;
+                height: 200px;
+                transform: translate3d(0,-200px,0)
+                
+            }
+        }
+        @keyframes arise12{
+            0%{
+                transform: translate3d(300px,-200px,0)
+            }
+            100%{
+                width: 300px;
+                height: 200px;
+                transform: translate3d(-300px,0,0)
+                
+            }
+        }
+        @keyframes arise13{
+            0%{
+                transform: translate3d(0,-200px,0)
+            }
+            100%{
+                width: 300px;
+                height: 200px;
+                transform: translate3d(-600px,200px,0)
+                
+            }
+        }
+        @keyframes arise14{
+            0%{
+                transform: translate3d(-300px,-200px,0)
+            }
+            100%{
+                width: 300px;
+                height: 200px;
+                transform: translate3d(-600px,200px,0);
+            }
+        }
+        @keyframes arise15{
+            0%{
+                transform: translate3d(-600px,-200px,0)
+            }
+            100%{
+                width: 300px;
+                height: 200px;
+                transform: translate3d(-600px,200px,0);
+            }
+        }
+        @keyframes arise16{
+            0%{
+                transform: translate3d(600px,-400px,0)
+            }
+            100%{
+                width: 300px;
+                height: 200px;
+                transform: translate3d(900px,0,0);
+            }
+        }
+        @keyframes arise17{
+            0%{
+                transform: translate3d(300px,-400px,0)
+            }
+            100%{
+                width: 300px;
+                height: 200px;
+                transform: translate3d(900px,0,0);
+            }
+        }
+        @keyframes arise18{
+            0%{
+                transform: translate3d(0,-400px,0)
+            }
+            100%{
+                width: 300px;
+                height: 200px;
+                transform: translate3d(600px,-200px,0);
+            }
+        }
+        @keyframes arise19{
+            0%{
+                transform: translate3d(-300px,-400px,0)
+            }
+            100%{
+                width: 300px;
+                height: 200px;
+                transform: translate3d(300px,-400px,0);
+            }
+        }
+        @keyframes arise20{
+            0%{
+                transform: translate3d(-600px,-400px,0)
+            }
+            100%{
+                width: 300px;
+                height: 200px;
+                transform: translate3d(0,-600px,0);
+            }
+        }
+        
+        p{
+            display: none;
+            font-size: 30px;
+            color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <!-- <div>点击有惊喜哟</div>
+        <div>点击有惊喜哟</div>
+        <div>点击有惊喜哟</div>
+        <div>点击有惊喜哟</div>
+        <div>点击有惊喜哟</div>
+        <div>点击有惊喜哟</div>
+        <div>点击有惊喜哟</div>
+        <div>点击有惊喜哟</div>
+        <div>点击有惊喜哟</div>
+        <div>点击有惊喜哟</div>
+        
+        <div>点击有惊喜哟</div>
+        <div>点击有惊喜哟</div>
+        <div>点击有惊喜哟</div>
+        <div>点击有惊喜哟</div>
+        <div>点击有惊喜哟</div>
+        <div>点击有惊喜哟</div>
+        <div>点击有惊喜哟</div>
+        <div>点击有惊喜哟</div>
+        <div>点击有惊喜哟</div>
+        <div>点击有惊喜哟</div> -->
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+    <audio src="../music/晚风.mp3" autoplay="autoplay" loop="loop" id="vd">
+    <script>
+        /* var section=document.querySelector('section');
+        var divs=document.querySelector('section').querySelectorAll('div');
+        for(var i=0;i<divs.length;i++){
+            divs[i].onmouseover=function(){
+                this.style.visibility='hidden';
+                
+            }
+            divs[i].onmouseout=function(){
+                this.style.visibility='visible';
+            }
+            divs[i].onclick=function(){
+                this.className("love")
+            }
+        } */
+        var section=document.querySelector('section');
+        document.addEventListener('keydown',function(){
+            /* section.style.display='none'; */
+            location.href="yinghua.html";
+        })
+        var divs=document.querySelector('section').querySelectorAll('div');
+        for(var i=0;i<divs.length;i++){
+            divs[i].onmouseover=function(){
+                /* this.style.visibility='hidden'; */
+                this.innerText='按下空格键有惊喜呦'
+            }
+            divs[i].onmouseout=function(){
+                /* this.style.visibility='hidden'; */
+                this.innerText=''
+            }
+        }
+        
+    
+      window.onload = function(){
+               setInterval("toggleSound()",100);
+          }
+  
+      function toggleSound() {
+                  var music = document.getElementById("vd");//获取ID  
+                      
+                  if (music.paused) { //判读是否播放  
+                      music.paused=false;
+                      music.play(); //没有就播放 
+                  }    
+          }
+
+       
+        
+    </script>
+</body>
+</html>
